@@ -1,0 +1,52 @@
+jQuery(document).ready(function ($) {
+  $("#sort-select").on("change", function () {
+    var currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set("orderby", this.value);
+    window.location.href = currentUrl.toString();
+  });
+
+  // Check if GCSE script is already loaded
+  if (
+    typeof google === "undefined" ||
+    typeof google.search === "undefined" ||
+    typeof google.search.cse === "undefined"
+  ) {
+    // Google Custom Search implementation
+
+    //
+    (function () {
+      var cx = "012747997692479156974:mnmegfkb0h8";
+      var gcse = document.createElement("script");
+      gcse.type = "text/javascript";
+      gcse.async = true;
+      gcse.src = "https://cse.google.com/cse.js?cx=" + cx;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+
+    window.__gcse = {
+      callback: loadGoogleSearch,
+    };
+  } else {
+    // If GCSE is already loaded, call the function directly
+    loadGoogleSearch();
+  }
+
+  function loadGoogleSearch() {
+    if (typeof google !== "undefined" && google.search && google.search.cse) {
+      if (!document.querySelector(".gsc-control-cse")) {
+        google.search.cse.element.render({
+          div: "google-search-results",
+          tag: "searchresults-only",
+          gname: "google-results",
+        });
+      }
+      var element = google.search.cse.element.getElement("google-results");
+      if (element) {
+        element.execute(ahlSearch.searchQuery);
+      }
+    } else {
+      setTimeout(loadGoogleSearch, 100);
+    }
+  }
+});

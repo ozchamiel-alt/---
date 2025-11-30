@@ -1,0 +1,232 @@
+/**
+ * ============================================================================
+ * DAF MILA - MINIMAL JAVASCRIPT FOR INTERACTIVITY
+ * ============================================================================
+ * 
+ * VERSION 2.0 - Server-Side Rendering
+ * 
+ * This JavaScript file handles ONLY interactive features:
+ * - Bar chart animations
+ * - "Show more" button toggles
+ * - Navigation button scrolling
+ * - Tooltip display
+ * 
+ * WHAT'S REMOVED:
+ * - All content generation (now done on server)
+ * - AJAX data fetching (now done on server)
+ * - HTML rendering (now done on server)
+ * 
+ * WHY THIS MATTERS FOR SEO:
+ * - Google sees complete content immediately
+ * - Faster initial page load
+ * - Works even if JavaScript fails
+ * - Better accessibility
+ * 
+ * ============================================================================
+ */
+
+jQuery(document).ready(function ($) {
+  
+  /**
+   * ========================================================================
+   * NAVIGATION BUTTONS
+   * ========================================================================
+   * 
+   * Handles the navigation buttons at the top of the page.
+   * When clicked, scrolls smoothly to the relevant section and highlights it.
+   */
+  function setupMilaBtns() {
+    const btnIds = [
+      'post-millon',
+      'post-millon-more',
+      'post-munnahim',
+      'post-halufon'
+    ];
+    
+    const $milaBtns = $('.mila-btns');
+    
+    // Disable buttons for sections that don't exist
+    btnIds.forEach(function(id) {
+      const $btn = $milaBtns.find('a[href="#' + id + '"]');
+      const $section = $('#' + id);
+      
+      if ($section.length === 0) {
+        $btn.addClass('btn-disabled');
+      } else {
+        $btn.removeClass('btn-disabled');
+      }
+    });
+    
+    // Handle button clicks
+    $milaBtns.on('click', 'a:not(.btn-disabled)', function (e) {
+      e.preventDefault();
+      const targetId = $(this).attr('href').substring(1);
+      const $targetSection = $('#' + targetId);
+      
+      if ($targetSection.length > 0) {
+        // Move navigation buttons above target section
+        $milaBtns.detach().insertBefore($targetSection);
+        
+        // Smooth scroll to navigation buttons
+        $('html, body').animate({
+          scrollTop: $milaBtns.offset().top
+        }, 800);
+        
+        // Highlight target section temporarily
+        $targetSection.css({
+          transition: 'border 0.4s ease-in-out',
+          border: '2px solid red'
+        });
+        
+        // Remove highlight after 2 seconds
+        setTimeout(function () {
+          $targetSection.css('border', '');
+          setTimeout(function () {
+            $targetSection.css('transition', '');
+          }, 400);
+        }, 2000);
+      }
+    });
+  }
+  
+  /**
+   * ========================================================================
+   * COMBINATIONS "SHOW MORE" TOGGLE
+   * ========================================================================
+   * 
+   * Handles the "לכל הצירופים" (show all combinations) button.
+   * Toggles visibility of additional word combinations.
+   */
+  function setupCombinationsToggle() {
+    $('.more-tzirof').on('click', function (e) {
+      e.preventDefault();
+      const index = $(this).data('index');
+      const $moreTserufim = $('.tserufim-more-' + index);
+      
+      // Toggle visibility
+      $moreTserufim.toggle();
+      
+      // Change button text
+      const isVisible = $moreTserufim.is(':visible');
+      $(this).text(isVisible ? 'הסתר צירופים' : 'לכל הצירופים');
+    });
+  }
+  
+  /**
+   * ========================================================================
+   * HISTORICAL CHART - BAR ANIMATION
+   * ========================================================================
+   * 
+   * Animates the bars in the historical frequency chart.
+   * Bars grow from 0% to their actual percentage over 1 second.
+   */
+  function animateHalufonBars() {
+    $('#bars li .bar').each(function () {
+      var $bar = $(this);
+      var percentage = $bar.data('percentage');
+      
+      // Animate height from 0 to actual percentage
+      $bar.animate({
+        height: percentage + '%'
+      }, 1000);
+    });
+  }
+  
+  /**
+   * ========================================================================
+   * HISTORICAL CHART - TOOLTIP ON HOVER
+   * ========================================================================
+   * 
+   * Shows a tooltip with the exact frequency value when hovering over bars.
+   */
+  function setupHalufonBarHover() {
+    const $tooltip = $('#bar-tooltip');
+    const $chart = $('#chart');
+    
+    if ($chart.length === 0 || $tooltip.length === 0) {
+      return; // Chart doesn't exist on this page
+    }
+    
+    const chartOffset = $chart.offset();
+    const chartHeight = $chart.height();
+    
+    // Handle mouse hover on bars
+    $('#bars li').hover(
+      function () {
+        const $bar = $(this).find('.bar');
+        const shkhihut = $bar.data('real') + '%';
+        const barHeight = $bar.height();
+        
+        // Track mouse movement to position tooltip
+        $(this).mousemove(function (e) {
+          const chartOffset = $chart.offset();
+          
+          $tooltip.text(shkhihut).css({
+            display: 'block',
+            left: e.pageX - chartOffset.left,
+            top: chartOffset.top - barHeight * 0.7 - chartHeight
+          });
+        });
+      },
+      function () {
+        // Hide tooltip when mouse leaves
+        $(this).off('mousemove');
+        $tooltip.hide();
+      }
+    );
+  }
+  
+  /**
+   * ========================================================================
+   * INITIALIZATION
+   * ========================================================================
+   * 
+   * Called when the DOM is ready.
+   * Initializes all interactive features.
+   */
+  function init() {
+    // Only run if we're on a daf-mila page with content
+    if ($('#content').length === 0) {
+      return;
+    }
+    
+    // Initialize all interactive features
+    setupMilaBtns();
+    setupCombinationsToggle();
+    animateHalufonBars();
+    setupHalufonBarHover();
+  }
+  
+  // Run initialization
+  init();
+  
+  /**
+   * ========================================================================
+   * NOTES FOR DEVELOPERS
+   * ========================================================================
+   * 
+   * This file is intentionally minimal compared to the old version.
+   * 
+   * OLD VERSION (~800 lines):
+   * - Fetched data via AJAX
+   * - Generated all HTML in JavaScript
+   * - Complex content rendering logic
+   * - Required JavaScript to see content
+   * 
+   * NEW VERSION (~200 lines):
+   * - Only handles interactivity
+   * - No content generation
+   * - No AJAX calls
+   * - Content visible even if JavaScript fails
+   * 
+   * BENEFITS:
+   * - ✅ Better SEO (Google sees content immediately)
+   * - ✅ Faster page load (no AJAX delay)
+   * - ✅ Better accessibility (works without JS)
+   * - ✅ Easier to maintain
+   * - ✅ More reliable
+   * 
+   * ========================================================================
+   */
+  
+});

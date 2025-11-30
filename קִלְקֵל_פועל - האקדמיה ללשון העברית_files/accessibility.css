@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+
+/***SReader & keyboardNav **/
+.form-field.field-cv input {
+    display: block !important;
+}
+.VA-SReader [type='checkbox'],
+.VA_keyboardNav [type='checkbox'] {
+    position: absolute;
+    opacity: 1 !important;
+    height: 20px !important;
+    width: 14px !important;
+    border: 1px solid black !important;
+    right: -18px;
+}
+
+.VA_keyboardNav :focus,
+.VA-SReader :focus {
+    outline: 3px dashed midnightblue !important;
+}
+
+.VA_keyboardNav.VA-dark :focus,
+.VA-SReader.VA-dark :focus {
+    outline: 3px dashed white !important;
+}
+
+.VA-SReader .form-group .checkbox-container input,
+.VA_keyboardNav .form-group .checkbox-container input {
+    position: absolute !important;
+    opacity: 1 !important;
+    height: 20px !important;
+    right: -43px !important;
+    width: 20px !important;
+    top: -13px !important;
+}
+.SliderAcc{
+    display: flex;
+    flex-wrap: wrap;
+}
+.SliderAcc img{
+    width: 40% !important;
+}
+
+
+.ui-helper-hidden-accessible {
+    display: none !important;
+}
+.VA-SReader .SliderAcc .article-container ,.VA_keyboardNav .SliderAcc .article-container {
+    margin: 129px 13px !important;
+}
+.VA-SReader .home-hero .swiper-wrapper ,.VA_keyboardNav .home-hero .swiper-wrapper{
+    display: none !important;
+}
+.VA_keyboardNav .swiperHome-button-prev ,.VA_keyboardNav .swiperHome-button-prev{
+    display: none !important;
+}
+.VA-SReader .swiper-pagination , .VA_keyboardNav .swiper-pagination {
+  display: none !important;
+}
+body.home.VA-SReader header.fixed , body.home.VA_keyboardNav header.fixed{
+    position: absolute !important;
+}
+.SliderAcc .article-content a.btn {
+    float: left;
+}
+
+/********** dark mode ***********/
+
+.VA-dark.VA_keyboardNav :focus {
+    outline: 3px dashed gold !important;
+    background-color: lemonchiffon !important;
+    color: #000
+}
+.VA-dark [type="submit"]{
+    border:1px solid !important;
+}
+
+/********** bright mode **********/
+
+
+.VA-bright.VA_keyboardNav :focus {
+    outline: 3px dashed white !important;
+}
+.VA-bright [type="submit"]{
+    border:1px solid !important;
+}
+
+/*********tooltip**************/
+.selectize-input {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    top: -50px;
+    right: 0px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.selectize-input:focus+.tooltiptext {
+    visibility: visible;
+}
+
+@media (min-width:1024px) {
+
+   }
+
+@media only screen and (max-width: 767.98px) {
+   
+
+}

@@ -1,0 +1,903 @@
+@import url("https://accessible.vagas.co.il/a/_shared/fonts/IBM_Plex_Sans_Hebrew/index.css");
+
+.menuAceessible *:focus{
+    outline: 3px solid midnightblue !important;
+}
+/*accessibility toolbar*/
+/******************************tooltip*************************************/
+#menuAccessibility {
+  all: initial;
+  box-sizing: border-box;
+}
+#menuAccessibility * {
+  all: unset;
+  box-sizing: border-box;
+}
+#menuAccessibility, #menuAccessibility * {
+    font-family: 'IBM Plex Sans Hebrew', sans !important;
+}
+#menuAccessibility {
+    top: 90px;
+    border: 2px solid #ddd;
+    z-index: 99999999999999;
+    position: fixed;
+    width: 340px !important;
+    height: 540px !important;
+    background: #eee;
+    left: -500px;
+}
+
+#menuAccessibility {
+    left: -500px;
+    top: 21px;
+    border: 1px #000 solid;
+    direction: rtl;
+}
+
+#menuAccessibility #menuAceessible {
+    display: block;
+    border: 1px solid #ddd;
+    background: #fff;
+    width: 335px;
+    height: 465px;
+}
+
+#menuAccessibility #VAcloseMenu {
+    background: no-repeat 50% !important;
+    /* background-image: url(../images/acces_x.png) !important; */
+    position: absolute !important;
+    border: 0px !important;
+    z-index: 1001 !important;
+   /* width: 29px !important;
+    height: 30px !important;*/
+    margin-top: 10px !important;
+    right: 9px !important;
+    cursor: pointer;
+    top: 0px !important;
+}
+
+#menuAccessibility h3#H3Acce {
+    text-align: center;
+    font-size: inherit;
+    font-weight: bold;
+    padding-right: 25%;
+}
+
+#menuAccessibility img#imgAcc {
+    /* display: contents; */
+    width: 160px;
+    margin: 15px 95px;
+    background-size: 35px 30px;
+}
+
+#menuAccessibility .clear {
+    clear: both;
+    /* line-height: 1px; */
+}
+
+#menuAccessibility #iconTop {
+    padding-top: 20px;
+    height: 4em !important;
+}
+
+#menuAccessibility #iconTop2 {
+    padding-top: 20px;
+    height: 3.5em !important;
+    margin: 15px 3px 3px 30px !important;
+}
+
+#menuAccessibility .VAhalfBtn {
+    display: flex !important;
+    flex-direction: column;
+    height: 7em;
+}
+
+#menuAccessibility .VA-readable-btn,
+#menuAccessibility .VA-links-btn {
+    display: flex !important;
+    flex-direction: column;
+}
+
+#menuAccessibility #iconTop3 {
+    height: 5em !important;
+}
+
+#menuAccessibility #iconTop4 {
+    height: 2.5em !important;
+    /* margin: -5px 16px 5px 5px !important;*/
+}
+
+#menuAccessibility div#iconTop4 {
+    padding-top: 0px;
+}
+
+#menuAccessibility #menuAceessible,
+#menuAccessibility #menuAceessible * {
+    /*! -webkit-box-sizing: content-box!important; */
+    display: block;
+    /*! top: 21px; */
+}
+
+#menuAccessibility .hrAcc {
+    margin: 10px;
+    border-top: 1px solid black;
+    opacity: 1;
+    position: relative;
+    height: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15em;
+    margin-top: 20px;
+}
+
+#menuAccessibility .ProfilAcc {
+    display: inline-block;
+   float: left;
+    width: 110px;
+    color: black !important;
+    cursor: pointer;
+}
+/* btn - gray background hover */
+/* 
+div#menuAccessibility {
+    font-family: "Birzia", sans-serif;
+} */
+
+#menuAccessibility .hrAcc {
+    margin-top: 50px;
+}
+#menuAccessibility div#iconTop2 {
+    padding-top: 23px;
+    padding-bottom: 30px;
+}
+
+#menuAccessibility .ProfilAcc {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#menuAccessibility .VAhalfBtn.VAnotIndex.ProfilAcc.VAhalfBtnFirst {
+    padding: 8px 0 75px 0;
+}
+
+#menuAccessibility .VAhalfBtn.VAnotIndex.ProfilAcc.VAhalfBtnsec {
+    padding: 8px 0 75px 0;
+}
+/* end btn - gray background hover */
+
+
+#menuAccessibility .ProfilAcc:hover,
+#menuAccessibility .ProfilAcc:focus {
+    background-color: gainsboro;
+ }
+
+#menuAccessibility .VAhalfBtn.ProfilAcc:hover,
+#menuAccessibility .VAhalfBtn.ProfilAcc:focus {
+    height: 150% !important;
+}
+
+#menuAccessibility .ProfilAcc img {
+    display: block;
+    margin: auto;
+    border-style: none;
+    height: 30px;
+    width: 30px;
+}
+
+#menuAccessibility .pAcc {
+    text-align: center;
+    font-size: 11px;
+}
+
+#menuAccessibility .pAcc1 {
+    text-align: center;
+    font-size: 10px;
+}
+
+#menuAccessibility h3#H3Acce {
+    height: 2.5em !important;
+    padding-top: 10px !important;
+    font-weight: bold !important;
+    font-size: large !important;
+}
+
+#menuAccessibility div#VAcloseMenu {
+    float: left !important;
+    left: 300px !important;
+}
+
+#menuAccessibility #iconTop {
+    height: 10em;
+}
+
+#menuAccessibility .switch {
+    position: relative !important;
+    display: inline-block !important;
+    width: 28px;
+    height: 10px;
+    top: 13px !important;
+    margin: -12px 35px 16px 37px;
+}
+
+#menuAccessibility .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#menuAccessibility .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: -4px;
+    right:8px;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#menuAccessibility .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 0px;
+    bottom: 3px;
+    background-color: #000;
+    -webkit-transition: .4s;
+    transition: .4s;
+    /* margin-top: -1px; */
+}
+
+#menuAccessibility input:checked+.slider {
+    background-color: #ccc;
+}
+
+#menuAccessibility input:focus+.slider {
+    box-shadow: 0 0 1px #666;
+}
+
+#menuAccessibility input:checked+.slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+/* Rounded sliders */
+#menuAccessibility .slider.round {
+    border-radius: 34px;
+    height: 12px;
+}
+
+#menuAccessibility .slider.round:before {
+    border-radius: 50%;
+    top: 0px;
+    border: 4px solid #000;
+    box-sizing: border-box;
+}
+
+#menuAccessibility input:checked+.slider:before {
+    border: 4px solid #74B8F2;
+    background-color: #74B8F2;
+}
+
+#menuAccessibility #iconTop,
+#menuAccessibility div#iconTop3 {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+#menuAccessibility div#iconTop4 {
+    margin-top: 20px;
+}
+
+#menuAccessibility #iconTop2 .VAhalfBtn.VAhalfBtnFirst {
+    margin: 0px 50px 5px 5px;
+}
+
+#menuAccessibility #iconTop2 .VAhalfBtn.VAhalfBtnsec {
+    margin: 0px 53px 5px -46px;
+}
+
+#menuAccessibility #iconTop2 {
+    padding-top: 10px;
+}
+#VAopenMenu {
+    background: url(../images/icon-01.png) no-repeat;
+    /* background-color: white !important; */
+    position: fixed;
+    /* outline: 2px solid #fff; */
+    z-index: 100000000;
+    width: 60px;
+    height: 50px;
+    left: 0px;
+    border-radius: 25px;
+    bottom: 15% !important;
+    background-size: 58px 48px;
+    cursor: pointer;
+    /* border: 3px solid #008eb5; */
+    bottom: 15% !important;
+    background-position-y: 1px;
+}
+
+#menuAccessibility .VA-links-btn img {
+    height: auto !important;
+}
+#menuAccessibility img.imgBac {
+    background-color: #fff;
+    /* border: 1px solid #000; */
+    border-radius: 50%;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+#menuAccessibility img.imgSize {
+    width: 30px !important;
+    height: 30px !important;
+}
+#menuAccessibility .VAhalfBtn img {
+    float: right;
+    /*margin-top: 2px;*/
+}
+
+#menuAccessibility .logoAcc {
+    height: 25px;
+    display: initial !important;
+}
+
+#VAopenMenu:focus {
+    outline: 3px dashed midnightblue !important;
+}
+#menuAccessibility .VA-links-btn a {
+    border: 1px solid midnightblue !important;
+}
+#menuAccessibility img.imgSize {
+    width: 30px !important;
+    height: 30px !important;
+}
+#VAcloseMenu {
+    /* background: url(../images/acces_x.png); */
+    position: absolute;
+    z-index: 1001;
+    width: 29px;
+    height: 30px;
+    left: 400px !important;
+    cursor: pointer;
+}
+
+#menuAccessibility .VA-links-btn img {
+    height: 34px;
+    filter: contrast(1.5);
+    -webkit-filter: contrast(1.5);
+    -moz-filter: contrast(1.5);
+    -o-filter: contrast(1.5);
+    -ms-filter: contrast(1.5);
+}
+#menuAccessibility .VA-hide {
+    display: none !important;
+}
+
+#menuAccessibility body.VA_FlashBlocker {
+    transition: none !important;
+    animation: none !important;
+}
+
+#menuAccessibility div#AcessibleSite {
+    background: url(../accessibility/images/nagish.png) no-repeat;
+    width: 50px;
+    height: 35px;
+    margin-left: 10px;
+    background-size: 35px;
+    float: none;
+    display: inline-block;
+}
+
+#menuAccessibility #AcessibleSite a {
+    opacity: 0;
+    float: right;
+}
+
+#menuAccessibility .grayLine a,
+body.VA-bright #menuAccessibility .grayLine a {
+    direction: ltr;
+    color: #000 !important;
+    font-size: 20px;
+}
+/* This causes the main problems and doesn't belong into app-style anyways 
+commeting it out.
+.AccssesibleSubMenu {
+    display: block !important;
+}
+
+.AccssesibleSubMenu>div>div {
+    margin-left: 0px !important;
+} */
+/*targetLanguage*/
+#targetLanguage {
+    text-align: center;
+    background-image: url(https://accessible.vagas.co.il/a/vagas/img/selectBig.png);
+    background-repeat: no-repeat;
+    width: 80px;
+    background-size: 80px;
+    height: 21px;
+}
+#targetLanguage option[value="HE"]{
+    text-align: center;
+     width: 50px;
+    background-size: 47px;
+    background-image: url(https://accessible.vagas.co.il/a/vagas/img/Israel.png);
+}
+select#targetLanguage option[value="EN"]{
+    text-align: center;
+     width: 50px;
+    background-size: 47px;
+    background-image: url(https://accessible.vagas.co.il/a/vagas/img/Britain.png);
+}
+#targetLanguage ul.on{
+   max-height: calc(100% * var(--langs));
+   transition: max-height .4s ease-in;
+
+}
+#targetLanguage + ul {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-out;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    background-color: #F0F0F0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    border-radius: 0px 0px 6px 6px;
+}
+ul#LanguageList{
+    width: 60px !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    align-content: end !important;
+    align-items: baseline !important;
+}
+#LanguageList a span{
+    font-size: 57%;
+}
+#targetLanguage img{
+    margin-right: 7px !important;
+    margin-top: 4.5px !important;
+    width: 18%;
+}
+#targetLanguage span{
+   margin-right: 4px !important;
+    margin-top: -13.5px !important;
+    font-size: 57%;
+}
+#LanguageList img{
+    width: 18px;
+    margin: 0px 4px;
+}
+#LanguageList a{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    margin: 3px 0px 3px 9px;
+}
+#skipLinksNavigation {
+ /*  
+  all: initial;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+*/
+}
+
+#skipLinksNavigation:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+#skipLinksNavigation * {
+  /*  all: unset;*/
+}
+
+#skipLinksNavigation {
+    line-height: 0 !important;
+}
+
+#skipLinksNavigation ul {
+    list-style: none;
+    margin: 0px;
+}
+
+#skipLinksNavigation ul li {
+    list-style: none;
+}
+
+#menuAccessibility,
+#menuAccessibility * {
+    /* box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;*/
+    display: block;
+    /*left: 0px;*/
+    top: 21px;
+}
+
+.VA-HE a.VAaccess {
+    position: absolute;
+    top: -100px;
+    right: 50px;
+    color: #ffffff !important;
+    background-color: black;
+    z-index: 99999999;
+    border-radius: 5px;
+    padding: 15px;
+}
+.VA-EN a.VAaccess {
+    position: absolute;
+    top: -100px;
+    left: 50px;
+    color: #ffffff !important;
+    background-color: black;
+    z-index: 99999999;
+    border-radius: 5px;
+    padding: 15px;
+}
+/***/
+.VA-SReader a.VAaccess:focus,
+.VA_keyboardNav a.VAaccess:focus,
+a.skipLink.VAaccess:focus {
+    top: 20px !important;
+    outline: none !important;
+}
+
+.VA-SReader.VA-HE [type='checkbox'],
+.VA_keyboardNav.VA-HE [type='checkbox'] {
+    position: absolute;
+    opacity: 1 !important;
+    height: 20px !important;
+    width: 20px !important;
+    border: 1px solid black !important;
+    right: -27px;
+}
+.VA-SReader.VA-EN [type='checkbox'],
+.VA_keyboardNav.VA-EN [type='checkbox'] {
+    position: absolute;
+    opacity: 1 !important;
+    height: 20px !important;
+    width: 20px !important;
+    border: 1px solid black !important;
+    left: -27px;
+}
+
+
+.VA-SReader .switch [type='checkbox'],
+.VA_keyboardNav .switch [type='checkbox'] {
+    opacity: 0 !important;
+}
+:focus {
+    outline: none !important;
+}
+
+.VA_keyboardNav :focus,
+.VA-SReader :focus {
+    outline: 3px dashed midnightblue !important;
+}
+
+.VA_keyboardNav.VA-dark :focus,
+.VA-SReader.VA-dark :focus {
+    outline: 3px dashed white !important;
+}
+
+.VAhidden {
+    display: inline-block;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+/********** dark mode ***********/
+
+body.VA-dark,
+body.VA-dark *:not(.VA):not(#VAopenMenu):not(.VAaccess):not(img):not(#SITE_CONTAINER):not(#SITE_CONTAINER *){
+    background-color: #000 !important;
+    color: #fff !important;
+}
+html:not(#VAaccessibility) body.VA-dark:not(#VAaccessibility) a:not(.VA):hover{
+    background-color: lemonchiffon !important;
+    color: #000 !important;
+}
+
+body.VA-dark a {
+    color: #ffee00 !important;
+}
+
+body.VA-dark .slider.round {
+    border: 1px solid;
+
+}
+.VA-dark #menuAceessible {
+    background: black !important;
+}
+.VA-dark #menuAccessibility .slider.round{
+   border:1px solid;
+}
+ .VA-dark #menuAccessibility .slider.round:before{
+    border: 2px solid white !important; 
+ } 
+.VA-dark #menuAceessible span,
+.VA-dark #menuAceessible h3 {
+    color: white !important;
+    background: black !important;
+}
+
+.VA-dark #VAcloseMenu {
+    filter: invert(1) !important;
+}
+
+body.VA-dark .VA-bright-btn img,
+body.VA-dark .VA-grayscale-btn img,
+body.VA-dark .VA-dark-btn img {
+    background-color: white !important;
+}
+
+.VA-dark h1,
+.VA-dark h2,
+.VA-dark h3,
+.VA-dark h4 {
+    color: gold;
+    text-decoration: underline;
+}
+
+.VA-dark ::placeholder {
+    color: white !important;
+}
+
+.VA-dark ::-webkit-input-placeholder {
+    /* Edge */
+    color: white !important;
+}
+
+.VA-dark :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white !important;
+}
+
+.VA-dark #VAopenMenu {
+    background-color: white !important;
+}
+
+.VA-dark.VA_keyboardNav :focus {
+    outline: 3px dashed gold !important;
+    background-color: lemonchiffon !important;
+    color: #000 !important;
+}
+
+.VA-dark img {
+    -webkit-filter: invert(1);
+    -moz-filter: invert(1);
+    -o-filter: invert(1);
+    filter: invert(1);
+}
+
+body.VA-dark .fl-row-content-wrap {
+    background-image: none !important;
+}
+
+.VA-dark .accesToolbar .VAhalfBtn,
+.VA-dark .accesToolbar {
+    background: black;
+}
+
+
+.VA-dark #menuAccessibility,
+.VA-dark #menuAccessibility a,
+body.VA-dark #menuAccessibility .grayLine a {
+    color: #fff !important;
+    outline: none !important;
+}
+
+.VA-dark input,
+.VA-dark textarea {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+.VA-dark ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.VA-dark :-moz-input-placeholder {
+    color: #fff;
+}
+
+.VA-dark ::-moz-input-placeholder {
+    color: #fff;
+}
+
+.VA-dark :-ms-input-placeholder {
+    color: #fff;
+}
+.VA-dark a font[color] {
+    color: #ffee00 !important;
+}
+
+.VA-dark a:hover font[color] {
+    color: #000;
+}
+
+.VA-dark :focus span {
+    color: #000 !important;
+}
+.VA-dark a:hover,
+.VA-dark a:focus,
+.VA-dark a:hover span,
+.VA-dark a:focus span{
+    background: lemonchiffon !important;
+    color: black !important;
+}
+.VA-dark select,
+.VA-dark input,
+.VA-dark textarea {
+    border: 1px solid !important;
+}
+/********** bright mode ***********/
+
+html:not(#VAaccessibility) body.VA-bright:not(#VAaccessibility) a:not(.VA):hover {
+    background-color: lemonchiffon !important;
+    color: #000 !important;
+}
+
+body.VA-bright a {
+    color: midnightblue !important;
+}
+
+.VA-bright a.VAaccess {
+    color: #fff !important;
+}
+
+body.VA-bright #menuAccessibility a {
+    outline: none;
+    background: none !important;
+}
+
+.VA-bright #VAopenMenu {
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -o-filter: none;
+    -ms-filter: none;
+}
+
+.VA-brigt #menuAceessible span {
+    color: black !important;
+}
+.VA-bright ::placeholder {
+    color: black !important;
+}
+.VA-bright :-ms-input-placeholder {
+    color: black;
+}
+.VA-bright ::-webkit-input-placeholder {
+    /* Edge */
+    color: black !important;
+}
+
+.VA-bright :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black !important;
+}
+
+.VA-bright .pAcc1 {
+    color: black !important;
+}
+.VA-bright.VA-bright h1,
+.VA-bright h2,
+.VA-bright h3,
+.VA-bright h4,
+.VA-bright h5 {
+    color: midnightblue !important;
+    text-decoration: underline;
+}
+.VA-bright p {
+    color: black;
+}
+.VA-bright.VA_keyboardNav :focus {
+    outline: 3px dashed white !important;
+}
+.VA-bright img {
+    -webkit-filter: contrast(1.5);
+    -moz-filter: contrast(1.5);
+    -o-filter: contrast(1.5);
+    -ms-filter: contrast(1.5);
+    filter: contrast(1.5);
+}
+
+.VA-bright ::-webkit-input-placeholder {
+    color: black;
+}
+
+.VA-bright :-moz-input-placeholder {
+    color: black;
+}
+
+.VA-bright ::-moz-input-placeholder {
+    color: black;
+}
+.VA-bright input {
+    color: #000 !important;
+}
+.VA-bright a:hover,
+.VA-bright a:focus
+.VA-bright a:hover span,
+.VA-bright a:focus span {
+    background: lemonchiffon !important;
+    color: black !important;
+}
+
+.VA-bright select,
+.VA-bright input
+.VA-bright textarea{
+    border: 1px solid !important;
+}
+/********* grayscale mode ************/
+body.bg.VA-grayscale {
+    background: none;
+    background-color: white !important;
+}
+
+html.VA-grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+
+body.VA-grayscale #VA_toolbar li button.VA-grayscale {
+    background-color: #3d3d3d;
+}
+/********* readable-font mode ************/
+body.VA-readable-font * {
+    font-family: "Arial", sans-serif !important;
+}
+/********* links mode ************/
+.VA-links a {
+    border: 1px solid midnightblue !important;
+}
+
+
+@media (min-width:1024px) {
+
+}
+
+@media only screen and (max-width: 767.98px) {
+   
+
+}

@@ -1,0 +1,880 @@
+#content {
+  overflow: unset;
+
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+  max-width: 800px;
+  min-height: 400px;
+  font-family: Assistant;
+  position: relative;
+}
+
+h1.about-word {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: 600;
+  color: #d22830;
+  font-size: 32px;
+}
+
+.mila-btns {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.class-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  transition: all 0.3s ease;
+}
+
+.mila-btns a {
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 #00000061;
+  text-align: center;
+  padding-block: 3px;
+  text-decoration: none;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: #cd2c33;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mila-btns a.btn-disabled {
+  background-color: #e1e6ea;
+  color: #105377;
+  opacity: 0.6;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.post.millon,
+.post.munnahim,
+#post-halufon,
+#post-hahlata {
+  box-sizing: border-box;
+  margin-inline: unset;
+  padding: 20px;
+  display: inline-block;
+  width: 98%;
+  right: 1%;
+  position: relative;
+  background: white;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.post.millon .wrap,
+.post.munnahim .wrap,
+.post.hahlata .wrap {
+  margin: 5px 56px 0 0;
+
+  position: relative;
+}
+
+.post.millon img.icon,
+.post.munnahim img.icon,
+.post.hahlata img.icon {
+  float: right;
+  position: absolute;
+  right: -67px;
+  top: -5px;
+}
+
+.post.hahlata ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.post.hahlata ul li a {
+  color: #d22830 !important;
+  text-decoration: none;
+  font-weight: 400;
+}
+.daf_milla_posts h4,
+.post.millon h4,
+.post.munnahim h4,
+.post.halufon h4,
+.post.hahlata h4 {
+  font-size: 20px;
+  color: #105377;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-transform: inherit;
+}
+
+.post.millon h2.MenukkadMispar {
+  display: inline-block;
+  clear: both;
+}
+
+.post.millon h2 {
+  color: #333333;
+  font-size: 20px;
+  display: inline-block;
+  font-family: Assistant !important;
+  font-weight: bold;
+  text-rendering: optimizelegibility;
+}
+
+.post.millon .MilonTable {
+  border: 1px solid #0f526c;
+  display: inline-block;
+  font-size: 18px;
+  border-bottom: none;
+  margin: 0;
+  margin-top: 15px;
+  width: fit-content;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.post.millon .MilonTable th {
+  border-bottom: 1px solid #0f526c;
+  border-left: 1px solid #0f526c;
+  font-family: Assistant;
+  color: #d22830;
+  padding: 0 5px;
+  font-weight: normal;
+}
+
+.post.millon .MilonTable td {
+  background-color: #eff4f7;
+  border-bottom: 1px solid #0f526c;
+  color: #333333;
+  padding: 0 5px;
+  font-weight: normal;
+  font-family: Alef, arial, sans-serif !important; 
+}
+
+.post.millon .hagdara {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  clear: both;
+  font-family : Assistant !important; 
+}
+
+ul.hagdara {
+  list-style: disc;
+  margin: 0 20px 0 0;
+  font-family: Assistant !important;
+  padding: 0;
+}
+
+.post.millon .hagdara h4,
+.post.millon h4.tserufim {
+  font-size: 20px;
+  font-family: Assistant !important;
+  color: #d22830;
+  font-weight: 600;
+}
+
+ul.tserufim {
+  list-style: disc;
+  margin: 0 20px 0 0;
+  padding: 0;
+}
+
+ul.tserufim li a {
+  color: #105377;
+  text-decoration: none;
+}
+
+ul.tserufim li a:hover {
+  text-decoration: underline;
+}
+
+ul.tserufim.more {
+  display: none;
+  clear: both;
+  margin-top: 0px;
+  float: right;
+}
+
+.more-tzirof {
+  background: transparent;
+  border: none;
+  color: #105377 !important;
+  position: relative;
+  font: 19px Assistant, Arial, sans-serif;
+  line-height: 1.5em;
+  margin-top: 10px;
+  float: right;
+  outline: 0;
+  clear: both;
+  margin-bottom: 30px;
+}
+
+.more-tzirof:hover {
+  font-weight: bold;
+}
+.present-milon {
+  float: left;
+  margin: 20px 0 -10px;
+  font-size: 13px;
+}
+
+.present-milon a {
+  text-decoration: underline !important;
+  color: #105377 !important;
+}
+
+ul.tserufim.more {
+  display: none;
+  clear: both;
+  margin-top: 0px !important;
+  float: right;
+}
+
+.more-tzirof {
+  background: transparent;
+  border: none;
+  color: #105377 !important;
+  position: relative;
+  font: 19px Assistant, Arial, sans-serif;
+  line-height: 1.5em;
+  margin-top: 10px;
+  float: right;
+  outline: 0;
+  clear: both;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.more-tzirof::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 7px;
+  background-image: url(../images/underline.png);
+}
+
+.icon-wrap {
+  position: relative;
+  clear: both;
+  margin-top: 40px;
+  display: contents;
+  float: right;
+}
+
+.munnahim .thumbnail {
+  clear: both;
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  border: 1px solid #dddddd;
+  border-radius: 0;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  background-color: white;
+}
+
+.mesumman_thumbnail .mesumman_caption,
+.keta_thumbnail .keta_caption {
+  padding: 0 9px;
+}
+
+.mesumman_thumbnail p,
+.keta_thumbnail p {
+  margin: 0px;
+  font-family: 19px Assistant, Arial, sans-serif;
+}
+
+.rtl-dir {
+  direction: rtl;
+}
+
+.ltr-dir {
+  direction: ltr;
+  display: flex;
+}
+
+hr.keta_helek-delimiter {
+  border: none;
+  height: 1px;
+  color: #b9b9b9;
+  background-color: #b9b9b9;
+  margin: auto 0;
+}
+
+.keta_munnah-meudkan,
+.keta_munnah-ktiv-male {
+  font-weight: bold !important;
+  font-family: 19px Assistant, Arial, sans-serif;
+}
+
+.munnahim .thumbnail a {
+  color: #105377;
+  text-decoration: none;
+  font-family: Assistant !important;
+}
+
+.kotertVemedia .KtivMale {
+  font-family: Alef, arial, sans-serif;
+}
+
+
+
+a.charturl {
+  font-family: Assistant !important;
+}
+
+.post.munnahim h5.munnahtitle {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 25px;
+  float: right;
+  text-transform: inherit;
+  font-family: Assistant !important;
+}
+
+.post.munnahim a.read-more {
+  color: #105377;
+  display: block;
+  float: right;
+  clear: none;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+.post.munnahim a.read-more:hover {
+  font-weight: bold;
+}
+
+a.read-more::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 7px;
+  background-image: url(../images/underline.png);
+}
+
+.keta_pilluah-le-millon a {
+  margin-left: 5px;
+}
+
+.post.halufon .wrap {
+  margin: 5px 56px 0 0;
+  padding-bottom: 30px !important;
+  position: relative;
+}
+
+.post.halufon img.icon {
+  float: right;
+  position: absolute;
+  right: -64px;
+  top: -5px;
+}
+
+#chart {
+  width: 85%;
+  position: relative;
+  height: 275px;
+  margin: 30px auto 30px;
+  display: block;
+  font-family: alef, arial, sans serif;
+}
+
+#chart .schichot_scale {
+  text-align: left;
+  color: #105377;
+  position: absolute;
+  left: 0;
+  top: -70px;
+}
+
+#chart .schichot_scale span {
+  float: left;
+  font-size: 16px;
+  clear: both;
+  line-height: 17px;
+}
+
+#chart #numbers {
+  width: 9%;
+  height: 93%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float: left;
+  background-image: url(../images/y-axis.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#chart #numbers li {
+  text-align: right;
+  padding-right: 0;
+  list-style: none;
+  height: 23px;
+  color: #105377;
+  position: relative;
+  bottom: 0px;
+}
+
+#chart #numbers li span {
+  color: #105377;
+  position: absolute;
+  bottom: 0;
+  right: 25px;
+}
+
+#chart #bars {
+  display: block;
+  width: 90%;
+  left: -4%;
+  position: relative;
+  height: 250px;
+  direction: ltr;
+  padding: 0 0 0px 14px;
+  margin: 0;
+  background: url(../images/horizontal_line.png);
+  background-repeat: no-repeat;
+  background-position: 15% 100%;
+  overflow: visible;
+}
+
+#chart #bars li {
+  display: table-cell;
+  width: 70px;
+  height: 250px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+#chart #bars li .bar {
+  display: block;
+  width: 45px;
+  margin: 0 8px;
+  background: url(../images/graph-bar.png);
+  position: absolute;
+  bottom: 10px;
+}
+
+#chart #bars:after {
+  content: "שנים";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  color: #105377;
+  right: -45px;
+}
+
+#chart #bars li span {
+  color: #225b7d;
+  width: 100%;
+  font-size: 13px;
+  position: absolute;
+  bottom: -36px;
+  left: 0;
+  direction: rtl;
+  text-align: center;
+  line-height: 16px;
+}
+
+.post a.charturl {
+  color: #105377;
+  position: relative;
+  float: left;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.post a.charturl:hover {
+  font-weight: bold;
+}
+
+a.charturl::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 7px;
+  background-image: url(../images/underline.png);
+}
+
+#bar-tooltip {
+  z-index: 1000;
+  pointer-events: none;
+  background: none;
+}
+
+.archive.tag #content-box > #content-container #content .daf_milla_posts {
+  display: grid !important;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 14px;
+  background: white;
+  padding: 0 0 2px 4%;
+  width: 98%;
+}
+
+a.read-more {
+  font-family: Assistant !important;
+}
+
+.daf_milla_posts .entry-title-list,
+.daf_milla_posts .text {
+  width: 75%;
+  float: right;
+  clear: none;
+  padding-right: 15px;
+}
+
+.daf_milla_posts h2 {
+  margin-top: -4px !important;
+  font-family: Assistant;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.archive.tag #content-box > #content-container #content .daf_milla_posts img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: 100% !important;
+}
+
+.daf_milla_posts img.wp-post-image {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: contain;
+  float: right;
+}
+
+.daf_milla_posts .text {
+  font-family: Assistant;
+}
+
+.daf_milla_posts .entry-title-list,
+.daf_milla_posts .text {
+  width: 75%;
+  float: right;
+  clear: none;
+  padding-right: 15px;
+}
+
+.post.daf_milla_posts .entry-title-list a {
+  color: #d22a30;
+  float: right;
+  text-decoration: none;
+  line-height: 26px;
+}
+
+#siteAnswaresContent {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.daf_milla_posts .text {
+  position: relative;
+  padding-bottom: 30px; /* Adjust this value as needed */
+}
+
+#siteAnswaresContent a.read-more {
+  color: #105377;
+  margin: 0;
+  padding: 10px 0 0 0;
+  display: block;
+  position: relative;
+  float: left;
+  text-align: left;
+  clear: both;
+  text-decoration: none;
+}
+
+#siteAnswaresContent a.read-more:hover {
+  font-weight: bold;
+}
+
+#siteAnswaresContent a.read-more::after {
+  background-repeat: no-repeat;
+}
+
+.post.millon .wrap {
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.post.daf_milla_posts .entry-title-list a:hover {
+  text-decoration: underline;
+}
+
+#siteAnswaresContent .separator {
+  height: 2px;
+  background-color: #eff4f7;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.kotertVemedia {
+  margin-top: 0.65rem;
+  display: flex;
+  align-items: center;
+}
+
+button.play-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #eff4f7;
+  color: #115377;
+}
+
+button.play-button img {
+  width: 30px;
+  height: 30px;
+  max-width: none !important;
+}
+
+/* בר התקדמות של כפתור השמע */
+.kotertVemedia [role="progressbar"] {
+  margin-left: 0.5rem;
+  width: 40px;
+  aspect-ratio: 1;
+  background: conic-gradient(#115377 var(--progress, 0), #d3d3d3 0%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.kotertVemedia [role="progressbar"]::after {
+  /* content: ""; */
+  background: #fff;
+  border-radius: inherit;
+  width: calc(100% - 20px);
+  aspect-ratio: 1/1;
+  display: grid;
+}
+
+div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: rgba(51, 51, 51, 0.34) url(../images/preloader.gif) no-repeat
+    center center;
+}
+
+div#preloader h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  line-height: 119vh;
+  font-family: Assistant;
+
+}
+
+.HearatTeken {
+  display: flex;
+  color: #0f526c;
+  font-family: Alef, arial, sans-serif !important;  
+}
+
+.present-milon {
+  font-family: Assistant !important;
+}
+.HearatTeken span {
+  color: #d22830;
+}
+
+.header-single .search-block .site-banner a img {
+    margin-top: 2rem !important;
+}
+
+.additional-results {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-radius: 5px;
+
+  gap: 5px;
+}
+
+.additional-results .icon {
+
+  object-fit: contain;
+}
+
+.additional-results--title {
+  font-weight: bold;
+}
+
+.additional-results a {
+  transition: color 0.3s ease;
+}
+
+.additional-results a:hover {
+  text-decoration: underline;
+}
+
+.millon-separator {
+  margin-top: 2rem;
+}
+
+/* Styles for HalufonList when it replaces MillonHaHoveList */
+.post.halufon:not(#post-halufon) {
+  box-sizing: border-box;
+  margin-inline: unset;
+  padding: 20px;
+  display: inline-block;
+  width: 98%;
+  right: 1%;
+  position: relative;
+  background: white;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.post.halufon:not(#post-halufon) .wrap {
+  margin: 5px 56px 0 0;
+  position: relative;
+}
+
+.post.halufon:not(#post-halufon) img.icon {
+  float: right;
+  position: absolute;
+  right: -67px;
+  top: -5px;
+}
+
+.post.halufon:not(#post-halufon) h4 {
+  font-size: 20px;
+  color: #105377;
+  font-weight: bold;
+  text-transform: inherit;
+  font-family: Assistant !important;
+}
+
+/* Foreign word styling */
+.post.halufon:not(#post-halufon) > .wrap > span {
+  font-size: 24px;
+  color: #333333;
+  font-family: Alef, arial, sans-serif !important;
+  font-weight: 600;
+}
+
+/* Hebrew translation section */
+.post.halufon .millaivrit {
+  font-family: Assistant !important;
+  font-size: 22px;
+  color: #333333;
+}
+
+.post.halufon .millaivrit strong {
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.post.halufon .millaivrit span {
+  font-family: Assistant , arial, sans-serif !important;
+  color: #333333;
+  font-weight: 300;
+}
+
+/* Binyan section */
+.post.halufon .binyan {
+  font-family: Alef, arial, sans-serif !important;
+  font-size: 16px;
+  color: #105377;
+  margin-top: 10px;
+  min-height: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 800px) {
+  .post.halufon:not(#post-halufon) img.icon {
+    right: -38px;
+  }
+  
+  .post.halufon:not(#post-halufon) .wrap {
+    margin: 5px 25px 0 0;
+  }
+  
+  .post.halufon:not(#post-halufon) h4 {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .post.halufon .millaivrit {
+    font-size: 16px;
+  }
+  
+  .post.halufon:not(#post-halufon) > .wrap > span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  #content {
+    padding-inline: 5px;
+  }
+  .mila-btns {
+    gap: 10px;
+  }
+
+  #chart #bars li .bar {
+    width: 15px;
+  }
+
+  #chart #bars li span {
+    bottom: -57px;
+    font-size: 12px;
+  }
+  .post.millon img.icon,
+  .post.munnahim img.icon {
+    right: -38px;
+  }
+  .post.millon .wrap,
+  .post.munnahim .wrap,
+  .post.hahlata .wrap {
+    margin: 5px 25px 0 0;
+  }
+
+  .daf_milla_posts h4,
+  .post.millon h4,
+  .post.munnahim h4,
+  .post.halufon h4 {
+    margin-right: 10px;
+  }
+}
+
+.post.millon .hagdara {
+    display: block !important;
+  }
+
+@media only screen and (max-width: 768px) {
+  .post.millon .hagdara {
+    display: block !important;
+  }
+  ul.hagdarga {
+    display: block !important;
+  }
+}
